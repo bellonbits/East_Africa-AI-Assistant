@@ -1,0 +1,87 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>East Africa Travel Assistant</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/static/css/styles.css">
+    </head>
+    <body class="bg-gray-100 min-h-screen">
+        <div class="container mx-auto p-4">
+            <header class="bg-green-700 text-white p-4 rounded-lg shadow-md mb-6">
+                <h1 class="text-2xl font-bold">East Africa Travel Assistant</h1>
+                <p class="text-sm">Your expert guide to Kenya, Tanzania, Uganda, Rwanda, and more</p>
+            </header>
+            
+            <div class="flex flex-col md:flex-row gap-6">
+                <!-- Chat section -->
+                <div class="w-full md:w-2/3 bg-white rounded-lg shadow-md p-4">
+                    <div id="chat-container" class="h-96 overflow-y-auto mb-4 p-2">
+                        <div class="mb-4">
+                            <div class="bg-green-100 p-3 rounded-lg inline-block max-w-3xl">
+                                <p class="text-sm text-green-800">
+                                    Hello! I'm your East Africa Travel Assistant. I can help you with information about:
+                                </p>
+                                <ul class="list-disc pl-5 text-sm text-green-800 mt-2">
+                                    <li>Safari destinations like Serengeti and Masai Mara</li>
+                                    <li>Beach getaways in Zanzibar and the East African coast</li>
+                                    <li>Mountain trekking including Kilimanjaro</li>
+                                    <li>Cultural experiences and local cuisine</li>
+                                    <li>Travel planning, safety, and visa information</li>
+                                </ul>
+                                <p class="text-sm text-green-800 mt-2">
+                                    What would you like to know about travel in East Africa?
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Chat messages will be inserted here -->
+                    </div>
+                    
+                    <form id="query-form" class="flex flex-col space-y-2">
+                        <textarea id="query-input" class="w-full p-2 border border-gray-300 rounded-lg" 
+                                rows="3" placeholder="Ask me about travel in East Africa..."></textarea>
+                        <div class="flex justify-between">
+                            <button type="button" id="reset-btn" class="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600">
+                                New Conversation
+                            </button>
+                            <button type="submit" class="bg-green-700 text-white px-4 py-2 rounded-lg hover:bg-green-800">
+                                Send
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Info section -->
+                <div class="w-full md:w-1/3">
+                    <!-- Image gallery -->
+                    <div id="image-gallery" class="bg-white rounded-lg shadow-md p-4 mb-6 hidden">
+                        <h2 class="text-lg font-semibold mb-2 text-green-800">Related Images</h2>
+                        <div id="images-container" class="grid grid-cols-2 gap-2">
+                            <!-- Images will be inserted here -->
+                        </div>
+                    </div>
+                    
+                    <!-- Helpful links -->
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <h2 class="text-lg font-semibold mb-2 text-green-800">Helpful Resources</h2>
+                        <div id="links-container">
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li><a href="https://www.magicalkenya.com" target="_blank" class="text-blue-600 hover:underline">Magical Kenya</a></li>
+                                <li><a href="https://www.tanzaniatourism.go.tz" target="_blank" class="text-blue-600 hover:underline">Tanzania Tourism</a></li>
+                                <li><a href="https://www.visituganda.com" target="_blank" class="text-blue-600 hover:underline">Visit Uganda</a></li>
+                                <li><a href="https://www.visitrwanda.com" target="_blank" class="text-blue-600 hover:underline">Visit Rwanda</a></li>
+                                <li><a href="https://www.safaribookings.com" target="_blank" class="text-blue-600 hover:underline">Safari Bookings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script src="/static/js/script.js"></script>
+    </body>
+    </html>
+    
